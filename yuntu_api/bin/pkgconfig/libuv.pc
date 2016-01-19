@@ -1,0 +1,11 @@
+prefix=/opt/nfshost/RD/pc_tools/github_lovelacelee/opt/http_request/uv_httpparser_based/install
+exec_prefix=/opt/nfshost/RD/pc_tools/github_lovelacelee/opt/http_request/uv_httpparser_based/install
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libuv
+Version: 0.11.29
+Description: multi-platform support library with a focus on asynchronous I/O.
+
+Libs: -L${libdir} -luv -lrt -lpthread -lnsl -ldl 
+Cflags: -I${includedir}

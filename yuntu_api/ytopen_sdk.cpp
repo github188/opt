@@ -1,8 +1,7 @@
 #include "ytopen_sdk.h"
 #include <memory>
 
-#include <http_request.h>
-#include <curl/curl.h>
+#include <uv.h>
 
 using namespace std;
 using namespace rapidjson;
@@ -865,7 +864,7 @@ int writer(char *data, size_t size, size_t nmemb, std::string *writerData)
 
 int ytopen_sdk::curl_method(const string &addr, const string &req_str, string &rsp_str)
 {
-#if 1 /* off */
+#if 0 /* off */
     rsp_str.clear();
 
     CURL *curl = curl_easy_init();
@@ -949,6 +948,7 @@ int ytopen_sdk::curl_method(const string &addr, const string &req_str, string &r
     if(sign) {
         delete sign;
     }
+#if 0 /* off */
     struct iovec response;
     int ret = 0;
     printf("%s, %s, %s\n", addr.c_str(), req_str.c_str(),authstr.c_str());
@@ -961,6 +961,7 @@ int ytopen_sdk::curl_method(const string &addr, const string &req_str, string &r
     }
     printf("-----http post fail:%d\n",ret);
     if(response.iov_base)free(response.iov_base);
+#endif /* 0 off */
 #endif /* 0 off */
     return 0;
 }
