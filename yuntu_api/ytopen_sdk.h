@@ -11,6 +11,7 @@
 #include "rapidjson/document.h"
 #include "bin2ascii.h"
 #include "sign/include/qcloud_sign.h"
+#include <uv.h>
 
 class ytopen_sdk
 {
@@ -211,6 +212,8 @@ class ytopen_sdk
         int ImageTag(rapidjson::Document &result, const std::string &imagePath, int data_type = 0, const std::string &cookie = "");
 
     private:
+        void http_init();
+        void http_close();
         int curl_method(const std::string& addr, const std::string &req_str, std::string &rsp_str);
         
     private:
@@ -219,6 +222,7 @@ class ytopen_sdk
         std::string host;
         AppSign app_sign;
         std::string app_id;
+        uv_http_request_t* client;
 };
 
 #endif

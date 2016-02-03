@@ -1,7 +1,6 @@
 #include "ytopen_sdk.h"
 #include <memory>
 
-#include <uv.h>
 
 using namespace std;
 using namespace rapidjson;
@@ -862,6 +861,62 @@ int writer(char *data, size_t size, size_t nmemb, std::string *writerData)
      return len;
 }
 
+#define COLOR_N         "\033[m"
+#define COLOR_R         "\033[0;32;31m"
+#define COLOR_G         "\033[0;32;32m"
+#define COLOR_P         "\033[0;35m"
+#define COLOR_W         "\033[1;37m"
+
+static void httponconnect(uv_http_request_t* handle, void* user_data)
+{
+    printf("%sSMU http onconnect.\n%s", COLOR_G, COLOR_N);
+}
+
+static void httponerror(uv_http_request_t* handle, int status, void* user_data)
+{
+    printf("%sSMU http onerror status: %d %s.\n%s", COLOR_R,status, uv_strerror(status), COLOR_N);
+}
+
+static void httponbody(uv_http_request_t* handle, const char *at, size_t length, void* user_data)
+{
+    printf("%sSMU upload image response body len: %zd  msg: %s\n%s",COLOR_G, length, at, COLOR_N);
+}
+
+static void httponcomplete(uv_http_request_t* handle, void* user_data)
+{
+    printf("%sSMU upload complete.\n%s", COLOR_G, COLOR_N);
+}
+
+void ytopen_sdk::http_init()
+{
+    http_request_callbacks_t cb;
+    memset(&cb, 0, sizeof(http_request_callbacks_t));
+
+    cb.onconnect = httponconnect;
+    cb.onerror = httponerror;
+    cb.onbody = httponbody;
+    cb.on_message_complete = httponcomplete;
+
+    this->client = new uv_http_request_t;
+    assert(this->client);
+    uv_http_request_init(uv_default_loop(), this->client);
+    uv_http_request_set_callbacks(this->client, &cb);
+    printf("init http client for smu captasks ok\n");
+}
+
+void ytopen_sdk::http_close()
+{
+    if (this->client)
+    {
+        if (uv_http_request_close(this->client) == 0)
+        {
+            delete this->client;
+            this->client = NULL;
+        }
+    }
+}
+
+
 int ytopen_sdk::curl_method(const string &addr, const string &req_str, string &rsp_str)
 {
 #if 0 /* off */
@@ -933,7 +988,13 @@ int ytopen_sdk::curl_method(const string &addr, const string &req_str, string &r
     rsp_str.clear();
     //produce the sign for Authorization.
     char *sign = NULL;
-
+    char content_len[32] = "";
+    snprintf(content_len, 32, "%d", req_str.size());
+    http_init();
+    
+    uv_http_request_set_head(client, "Host", host_youtu.c_str());
+    uv_http_request_set_head(client, "Accept", "*/*");
+    uv_http_request_set_head(client, "Content-Type", "text/json");
     //get current time(s), add by 1000s as the expired time.
     time_t t;
     uint64_t cur_time = time(&t);
@@ -945,23 +1006,18 @@ int ytopen_sdk::curl_method(const string &addr, const string &req_str, string &r
                 sign);
 
     string authstr = "Authorization: "+ string(sign);
+    uv_http_request_set_head(client, "Authorization", sign);
     if(sign) {
         delete sign;
     }
-#if 0 /* off */
-    struct iovec response;
-    int ret = 0;
-    printf("%s, %s, %s\n", addr.c_str(), req_str.c_str(),authstr.c_str());
-    ret = http_post(addr.c_str(), req_str.c_str(), req_str.size(), "text/json", &response, authstr.c_str());
-    if(ret==200){
-        printf("-----http post :%.*s\n\n",(int )response.iov_len,(char *)response.iov_base);
-        
-        if(response.iov_base)free(response.iov_base);
-        return 0;
-    }
-    printf("-----http post fail:%d\n",ret);
-    if(response.iov_base)free(response.iov_base);
-#endif /* 0 off */
+
+    uv_http_request_set_head(client, "Content-Length", content_len);
+ 
+    printf("%s, %s\n", addr.c_str(), authstr.c_str());
+
+    
+    uv_http_request_simple_post(this->client, addr.c_str(), (void *)req_str.c_str(), req_str.size(), NULL);
+
 #endif /* 0 off */
     return 0;
 }

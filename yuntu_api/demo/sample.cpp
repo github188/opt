@@ -35,5 +35,8 @@ int main(int argc,char * argv[])
     result.Accept(writer);
     cout << buffer.GetString() << endl;
 
+    
+    uv_run(uv_default_loop(), UV_RUN_DEFAULT);
+
     return 0;
 }
