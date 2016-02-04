@@ -8,4 +8,4 @@ The modification copy give a replace hmac_sha1 implementation.
 
 The modification copy rely on customers implementation of HTTP, here we give a demo rely on libuv.
 
-building system using makeconfigure for test.
+Compiling system using CMAKE
