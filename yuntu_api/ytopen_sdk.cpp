@@ -2,6 +2,7 @@
 #include <memory>
 
 
+#include "bin2ascii.h"
 using namespace std;
 using namespace rapidjson;
 

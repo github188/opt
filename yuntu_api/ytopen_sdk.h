@@ -9,7 +9,6 @@
 #include "rapidjson/writer.h"
 #include "rapidjson/stringbuffer.h"
 #include "rapidjson/document.h"
-#include "bin2ascii.h"
 #include "sign/include/qcloud_sign.h"
 #include <uv.h>
 

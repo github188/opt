@@ -3,10 +3,6 @@
 
 #include "sha1.h"
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 #define SHA1_BLOCK_SIZE  64
 #define SHA1_DIGEST_SIZE SHA1_HASH_SIZE
 
@@ -37,9 +33,5 @@ void hmac_sha1(const unsigned char *key,     unsigned int key_size,
                const unsigned char *message, unsigned int message_len,
                      unsigned char *mac,     unsigned int *mac_size);
 
-#ifdef __cplusplus
-}
 #endif
 
-
-#endif

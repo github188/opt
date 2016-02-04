@@ -6,7 +6,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include <openssl/hmac.h> // -lcrypto
 #include <hmac_sha1.h>
 
 static int app_sign(unsigned int appid, const char* secret_id, const char* secret_key, unsigned int expired, const char* userid, const char* url, char*& sign)
@@ -58,26 +57,11 @@ static int app_sign(unsigned int appid, const char* secret_id, const char* secre
     }
 
     char bin[_CIPER_TEXT_MAX_LEN]= {0};
-    char out[_CIPER_TEXT_MAX_LEN]= {0};
-    unsigned int outlen = _CIPER_TEXT_MAX_LEN;
-    unsigned int len = 0;
-    printf("%s\n", plain_text);
-    printf("%s\n", secret_key);
-    HMAC(EVP_sha1(), (const void*)secret_key, strlen(secret_key), (const unsigned char*)plain_text, plain_text_len, (unsigned char*)bin, &len);
-    hmac_sha1((const uint8_t*)secret_key, strlen(secret_key), (const unsigned char*)plain_text, plain_text_len, (unsigned char*)out, &outlen);
 
-    printf("BIN: %d\r\n", len);
-    int i = 0;
-    for (i = 0 ; i < len; i++)
-        printf("%02x", bin[i]);
-    printf("\r\n");
-    
-    printf("OUT: %d\r\n", outlen);
-    
-    for (i = 0 ; i < outlen; i++)
-        printf("%02x", out[i]);
-    printf("\r\n");
-    
+    unsigned int len = 0;
+
+    hmac_sha1((const uint8_t*)secret_key, strlen(secret_key), (const unsigned char*)plain_text, plain_text_len, (unsigned char*)bin, &len);
+
     memcpy(bin + len, plain_text, plain_text_len);
     std::string base64 = QCloud::Base64::encode(bin, len + plain_text_len);
     
@@ -99,3 +83,4 @@ int qc_app_sign_once(unsigned int appid, const char* secret_id, const char* secr
 {
     return app_sign(appid, secret_id, secret_key, 0, userid, url, sign);
 }
+

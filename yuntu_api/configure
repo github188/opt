@@ -1,0 +1,3 @@
+#!/bin/bash
+
+makeconfigure cpp -luv -Wl,-rpath=./deps/lib -I./deps/include

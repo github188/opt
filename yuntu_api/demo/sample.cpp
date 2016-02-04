@@ -1,17 +1,29 @@
 #include <sys/time.h>
 #include <fstream>
 #include <iostream>
+#include <unistd.h>
+#include <stdlib.h>
 #include "../ytopen_sdk.h"
 
 using namespace std;
 using namespace rapidjson;
 
-int main(int argc,char * argv[])
+void DetectFace(ytopen_sdk &sdkentry)
 {
-    std::string encode("test");
-    encode = b64_encode(encode);
-    std::string decode = b64_decode(encode);
-    
+    rapidjson::Document result;
+    if(0 != sdkentry.DetectFace(result, "a.jpg"))
+    {
+        cout << "DetectFace failed." << endl;
+    }
+
+    StringBuffer buffer;
+    Writer<StringBuffer> writer(buffer);
+    result.Accept(writer);
+    cout << buffer.GetString() << endl;
+}
+
+void face_detection_callback(uv_timer_t *handle )
+{
     //app sign params.
     ytopen_sdk::AppSign m_app_sign = 
     {
@@ -24,19 +36,20 @@ int main(int argc,char * argv[])
     ytopen_sdk m_sdk;
     m_sdk.Init(m_app_sign);
 
-    rapidjson::Document result;
-    if(0 != m_sdk.DetectFace(result, "a.jpg"))
-    {
-        cout << "DetectFace failed." << endl;
-    }
+    DetectFace(m_sdk);
+}
 
-    StringBuffer buffer;
-    Writer<StringBuffer> writer(buffer);
-    result.Accept(writer);
-    cout << buffer.GetString() << endl;
+int main(int argc,char * argv[])
+{
+    uv_timer_t timer;
+    cout << "uv timer" << endl;
+    uv_timer_init(uv_default_loop(), &timer);
+    uv_timer_start(&timer, face_detection_callback, 0, 1000);
 
-    
+    cout << "uvloop" << endl;
     uv_run(uv_default_loop(), UV_RUN_DEFAULT);
-
+    uv_timer_stop(&timer);
+    uv_close((uv_handle_t *)&timer);
     return 0;
 }
+
