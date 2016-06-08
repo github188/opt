@@ -1,0 +1,8 @@
+# This clean shell rely on cmake, delete cmake obj files
+
+make clean
+
+rm CMakeFiles -rf
+rm CMakeCache.txt
+rm cmake_install.cmake
+rm Makefile
