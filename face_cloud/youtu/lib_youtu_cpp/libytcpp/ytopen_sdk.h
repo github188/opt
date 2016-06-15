@@ -11,8 +11,7 @@
 #include "rapidjson/document.h"
 #include "sign/include/qcloud_sign.h"
 
-typedef int (*post_method)(const std::string &addr, 
-    const std::string &req_str, std::string &rsp_str);
+typedef int (*post_method)(const std::string &addr, const std::string &req_str, std::string &rsp_str);
 
 class ytopen_sdk
 {
