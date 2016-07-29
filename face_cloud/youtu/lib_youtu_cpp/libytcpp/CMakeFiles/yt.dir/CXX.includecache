@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/CMakeFiles/3.4.2/CompilerIdCXX/CMakeCXXCompilerId.cpp
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp
 
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/bin2ascii.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/bin2ascii.h
 string
 -
 stdio.h
@@ -20,7 +20,7 @@ ctype.h
 fstream
 -
 
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/hmacsha/src/hmac_sha1.cpp
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/hmacsha/src/hmac_sha1.cpp
 hmac_sha1.h
 -
 string.h
@@ -28,7 +28,7 @@ string.h
 stdlib.h
 -
 
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/hmacsha/src/hmac_sha2.cpp
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/hmacsha/src/hmac_sha2.cpp
 string.h
 -
 hmac_sha2.h
@@ -38,13 +38,13 @@ stdio.h
 stdlib.h
 -
 
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/hmacsha/src/sha1.cpp
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/hmacsha/src/sha1.cpp
 sha1.h
 -
 memory.h
 -
 
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/hmacsha/src/sha2.cpp
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/hmacsha/src/sha2.cpp
 string.h
 -
 sha2.h
@@ -54,17 +54,17 @@ stdio.h
 stdlib.h
 -
 
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/allocators.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/allocators.h
 rapidjson.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/rapidjson.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/rapidjson.h
 
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/document.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/document.h
 reader.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/reader.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/reader.h
 internal/meta.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/internal/meta.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/internal/meta.h
 internal/strfunc.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/internal/strfunc.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/internal/strfunc.h
 new
 -
 string
@@ -74,79 +74,79 @@ iterator
 utility
 -
 
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/encodings.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/encodings.h
 rapidjson.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/rapidjson.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/rapidjson.h
 
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/error/error.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/error/error.h
 ../rapidjson.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/rapidjson.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/rapidjson.h
 
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/internal/biginteger.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/internal/biginteger.h
 ../rapidjson.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/rapidjson.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/rapidjson.h
 intrin.h
 -
 
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/internal/diyfp.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/internal/diyfp.h
 ../rapidjson.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/rapidjson.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/rapidjson.h
 intrin.h
 -
 
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/internal/dtoa.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/internal/dtoa.h
 itoa.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/internal/itoa.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/internal/itoa.h
 diyfp.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/internal/diyfp.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/internal/diyfp.h
 ieee754.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/internal/ieee754.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/internal/ieee754.h
 
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/internal/ieee754.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/internal/ieee754.h
 ../rapidjson.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/rapidjson.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/rapidjson.h
 
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/internal/itoa.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/internal/itoa.h
 ../rapidjson.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/rapidjson.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/rapidjson.h
 
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/internal/meta.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/internal/meta.h
 ../rapidjson.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/rapidjson.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/rapidjson.h
 type_traits
 -
 
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/internal/pow10.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/internal/pow10.h
 ../rapidjson.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/rapidjson.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/rapidjson.h
 
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/internal/stack.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/internal/stack.h
 ../rapidjson.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/rapidjson.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/rapidjson.h
 
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/internal/strfunc.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/internal/strfunc.h
 ../rapidjson.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/rapidjson.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/rapidjson.h
 
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/internal/strtod.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/internal/strtod.h
 ../rapidjson.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/rapidjson.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/rapidjson.h
 ieee754.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/internal/ieee754.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/internal/ieee754.h
 biginteger.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/internal/biginteger.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/internal/biginteger.h
 diyfp.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/internal/diyfp.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/internal/diyfp.h
 pow10.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/internal/pow10.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/internal/pow10.h
 
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/msinttypes/inttypes.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/msinttypes/inttypes.h
 stdint.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/msinttypes/stdint.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/msinttypes/stdint.h
 inttypes.h
 -
 
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/msinttypes/stdint.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/msinttypes/stdint.h
 stdint.h
 -
 limits.h
@@ -154,17 +154,17 @@ limits.h
 wchar.h
 -
 
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/rapidjson.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/rapidjson.h
 cstdlib
 -
 cstring
 -
 rapidjson/...
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/rapidjson/...
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/rapidjson/...
 msinttypes/stdint.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/msinttypes/stdint.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/msinttypes/stdint.h
 msinttypes/inttypes.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/msinttypes/inttypes.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/msinttypes/inttypes.h
 stdint.h
 -
 inttypes.h
@@ -172,25 +172,25 @@ inttypes.h
 endian.h
 -
 rapidjson/...
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/rapidjson/...
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/rapidjson/...
 cassert
 -
 allocators.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/allocators.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/allocators.h
 encodings.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/encodings.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/encodings.h
 
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/reader.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/reader.h
 rapidjson.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/rapidjson.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/rapidjson.h
 encodings.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/encodings.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/encodings.h
 internal/meta.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/internal/meta.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/internal/meta.h
 internal/stack.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/internal/stack.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/internal/stack.h
 internal/strtod.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/internal/strtod.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/internal/strtod.h
 intrin.h
 -
 nmmintrin.h
@@ -200,49 +200,49 @@ emmintrin.h
 stdexcept
 -
 rapidjson/error/error.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/rapidjson/error/error.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/rapidjson/error/error.h
 rapidjson/reader.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/rapidjson/reader.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/rapidjson/reader.h
 error/error.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/error/error.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/error/error.h
 
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/stringbuffer.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/stringbuffer.h
 rapidjson.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/rapidjson.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/rapidjson.h
 utility
 -
 internal/stack.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/internal/stack.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/internal/stack.h
 
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/writer.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/writer.h
 rapidjson.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/rapidjson.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/rapidjson.h
 internal/stack.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/internal/stack.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/internal/stack.h
 internal/strfunc.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/internal/strfunc.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/internal/strfunc.h
 internal/dtoa.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/internal/dtoa.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/internal/dtoa.h
 internal/itoa.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/internal/itoa.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/internal/itoa.h
 stringbuffer.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/stringbuffer.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/stringbuffer.h
 new
 -
 string
 -
 
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/sign/include/qcloud_sign.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/sign/include/qcloud_sign.h
 qcloud_sign_const.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/sign/include/qcloud_sign_const.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/sign/include/qcloud_sign_const.h
 
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/sign/include/qcloud_sign_const.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/sign/include/qcloud_sign_const.h
 
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/sign/src/qcloud_sign.cpp
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/sign/src/qcloud_sign.cpp
 qcloud_sign.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/sign/src/qcloud_sign.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/sign/src/qcloud_sign.h
 qcloud_sign_utils.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/sign/src/qcloud_sign_utils.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/sign/src/qcloud_sign_utils.h
 string.h
 -
 string
@@ -254,29 +254,29 @@ stdlib.h
 hmac_sha1.h
 -
 
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/sign/src/qcloud_sign_utils.cpp
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/sign/src/qcloud_sign_utils.cpp
 qcloud_sign_utils.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/sign/src/qcloud_sign_utils.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/sign/src/qcloud_sign_utils.h
 stdio.h
 -
 
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/yt.cpp
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/yt.cpp
 yt.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/yt.h
-
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/yt.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/yt.h
 string
 -
 
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/ytopen_sdk.cpp
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/yt.h
+
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/ytopen_sdk.cpp
 ytopen_sdk.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/ytopen_sdk.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/ytopen_sdk.h
 memory
 -
 bin2ascii.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/bin2ascii.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/bin2ascii.h
 
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/ytopen_sdk.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/ytopen_sdk.h
 string
 -
 vector
@@ -288,13 +288,13 @@ iostream
 stdlib.h
 -
 rapidjson/writer.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/writer.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/writer.h
 rapidjson/stringbuffer.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/stringbuffer.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/stringbuffer.h
 rapidjson/document.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/rapidjson/document.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/rapidjson/document.h
 sign/include/qcloud_sign.h
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/sign/include/qcloud_sign.h
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/sign/include/qcloud_sign.h
 
 hmacsha/include/hmac_sha1.h
 sha1.h

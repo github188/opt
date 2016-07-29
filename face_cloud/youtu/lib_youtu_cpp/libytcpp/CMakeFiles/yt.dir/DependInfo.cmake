@@ -4,15 +4,15 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/CMakeFiles/3.4.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" "/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/CMakeFiles/yt.dir/CMakeFiles/3.4.2/CompilerIdCXX/CMakeCXXCompilerId.o"
-  "/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/hmacsha/src/hmac_sha1.cpp" "/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/CMakeFiles/yt.dir/hmacsha/src/hmac_sha1.o"
-  "/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/hmacsha/src/hmac_sha2.cpp" "/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/CMakeFiles/yt.dir/hmacsha/src/hmac_sha2.o"
-  "/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/hmacsha/src/sha1.cpp" "/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/CMakeFiles/yt.dir/hmacsha/src/sha1.o"
-  "/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/hmacsha/src/sha2.cpp" "/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/CMakeFiles/yt.dir/hmacsha/src/sha2.o"
-  "/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/sign/src/qcloud_sign.cpp" "/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/CMakeFiles/yt.dir/sign/src/qcloud_sign.o"
-  "/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/sign/src/qcloud_sign_utils.cpp" "/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/CMakeFiles/yt.dir/sign/src/qcloud_sign_utils.o"
-  "/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/yt.cpp" "/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/CMakeFiles/yt.dir/yt.o"
-  "/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/ytopen_sdk.cpp" "/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/CMakeFiles/yt.dir/ytopen_sdk.o"
+  "/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.cpp" "/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/CMakeFiles/yt.dir/CMakeFiles/3.6.0/CompilerIdCXX/CMakeCXXCompilerId.o"
+  "/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/hmacsha/src/hmac_sha1.cpp" "/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/CMakeFiles/yt.dir/hmacsha/src/hmac_sha1.o"
+  "/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/hmacsha/src/hmac_sha2.cpp" "/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/CMakeFiles/yt.dir/hmacsha/src/hmac_sha2.o"
+  "/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/hmacsha/src/sha1.cpp" "/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/CMakeFiles/yt.dir/hmacsha/src/sha1.o"
+  "/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/hmacsha/src/sha2.cpp" "/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/CMakeFiles/yt.dir/hmacsha/src/sha2.o"
+  "/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/sign/src/qcloud_sign.cpp" "/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/CMakeFiles/yt.dir/sign/src/qcloud_sign.o"
+  "/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/sign/src/qcloud_sign_utils.cpp" "/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/CMakeFiles/yt.dir/sign/src/qcloud_sign_utils.o"
+  "/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/yt.cpp" "/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/CMakeFiles/yt.dir/yt.o"
+  "/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/ytopen_sdk.cpp" "/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/CMakeFiles/yt.dir/ytopen_sdk.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

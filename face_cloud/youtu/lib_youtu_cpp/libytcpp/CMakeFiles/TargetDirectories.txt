@@ -1,1 +1,3 @@
-/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/CMakeFiles/yt.dir
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/CMakeFiles/edit_cache.dir
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/CMakeFiles/rebuild_cache.dir
+/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/CMakeFiles/yt.dir

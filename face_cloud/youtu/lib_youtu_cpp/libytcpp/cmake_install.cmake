@@ -1,4 +1,4 @@
-# Install script for directory: /opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt
+# Install script for directory: /opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/opt/nfshost/GITPROJECTS/github/opt/yutu_release/libyt/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/opt/nfshost/serverdisk/github/opt/face_cloud/youtu/lib_youtu_cpp/libytcpp/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
