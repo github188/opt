@@ -1,0 +1,7 @@
+#!/bin/sh
+
+## This configure rely on makeconfigure
+
+INSTALL_DIR=${PWD}/install
+
+makeconfigure INSTALL=${INSTALL_DIR} PROJECT_NAME=favicongen PROJECT_TYPE=c
