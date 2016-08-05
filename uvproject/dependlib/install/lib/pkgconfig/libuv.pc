@@ -1,0 +1,11 @@
+prefix=/opt/nfshost/serverdisk/github/opt/uvproject/./dependlib/install
+exec_prefix=/opt/nfshost/serverdisk/github/opt/uvproject/./dependlib/install
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libuv
+Version: 1.9.1
+Description: multi-platform support library with a focus on asynchronous I/O.
+
+Libs: -L${libdir} -luv -lrt -lpthread -lnsl -ldl 
+Cflags: -I${includedir}
