@@ -75,6 +75,13 @@ void connection::handle_read(const boost::system::error_code& e,
             case READ_BODY:
                 m_reading = READ_HEADLEN;
                 std::cout << "Read size=" << bytes_transferred << " Xml body: \r\n" << m_request.XmlBody << std::endl;
+
+                /// TODO: Handle request
+
+                m_request_handler.handle_request(m_request, m_reply);
+
+                /// Delete request xml body.
+                m_request.XmlBodyDelete();
                 
                 std::cout << "Read standby read head again" << std::endl;
                 m_socket.async_read_some(
