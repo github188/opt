@@ -6,6 +6,8 @@
 #include <boost/noncopyable.hpp>
 #include <boost/shared_ptr.hpp>
 #include <boost/enable_shared_from_this.hpp>
+#include <boost/date_time/posix_time/posix_time.hpp>
+#include <boost/logic/tribool.hpp>
 
 #include "RequestHandler.hpp"
 #include "Protocol.hpp"
@@ -18,6 +20,13 @@ enum ReadStatus
     READ_HEAD,
     READ_BODY
 };
+
+struct connection_attr
+{
+    boost::posix_time::ptime last_online;
+    boost::tribool online_status;
+    XL_ServerCom type;
+}; 
 
 /// Represents a single connection from a client.
 class connection
@@ -53,13 +62,15 @@ private:
     request_handler& m_request_handler;
 
     /// The incoming request.
-    request m_request;
+    Message m_request;
 
     /// The reply to be sent back to the client.
-    reply m_reply;
+    Message m_reply;
 
     /// Read process status
     ReadStatus m_reading;
+
+    connection_attr m_attr;
 };
 
 typedef boost::shared_ptr<connection> connection_ptr;

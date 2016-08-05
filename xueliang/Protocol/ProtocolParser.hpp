@@ -1,7 +1,7 @@
 #ifndef PROTOCOL_PARSER_HPP
 #define PROTOCOL_PARSER_HPP
 
-struct request;
+#include "tinyxml2.h"
 
 class protocol_parser
 {

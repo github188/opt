@@ -15,7 +15,7 @@ class request_handler
 public:
     explicit request_handler();
 
-    void handle_request(const request& req, reply& rep);
+    void handle_request(const Message& req, Message& rep);
 
 private:
     int m_from;

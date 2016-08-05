@@ -3,7 +3,6 @@
 
 #include <boost/asio.hpp>
 #include <boost/array.hpp>
-#include "tinyxml2.h"
 
 typedef enum _XL_ServerCom
 {
@@ -80,9 +79,9 @@ struct XL_MsgHead
     int To;             /* 消息目的组件ID */
 } ; 
 
-struct reply : public XL_MsgHead
+struct Message : public XL_MsgHead
 {
-    reply() { XmlBody = nullptr; }
+    Message() { XmlBody = nullptr; }
     void XmlBodyNew()
     {
         XmlBody = new char[BodyLen];
@@ -92,23 +91,34 @@ struct reply : public XL_MsgHead
         delete [] XmlBody;
         XmlBody = nullptr;
     }
-    tinyxml2::XMLDocument XmlDoc;
-    char *XmlBody;
-};
+    /// Ack
+    Message operator|=(Message &o)
+    {
+        this->HeadLen = o.HeadLen;
+        this->Id = o.Id | 0x80000000;
+        this->BodyLen = 0;
+        this->Session = o.Session;
+        this->Error = o.Error;
+        this->Version = o.Version;
+        this->From = o.To;
+        this->To = o.From;
+        this->XmlBody = nullptr;
+        return *this;
+    }
+    Message operator|=(const Message &o)
+    {
+        this->HeadLen = o.HeadLen;
+        this->Id = o.Id | 0x80000000;
+        this->BodyLen = 0;
+        this->Session = o.Session;
+        this->Error = o.Error;
+        this->Version = o.Version;
+        this->From = o.To;
+        this->To = o.From;
+        this->XmlBody = nullptr;
+        return *this;
+    }
 
-struct request : public XL_MsgHead
-{
-    request() { XmlBody = nullptr; }
-    void XmlBodyNew()
-    {
-        XmlBody = new char[BodyLen];
-    }
-    void XmlBodyDelete()
-    {
-        delete [] XmlBody;
-        XmlBody = nullptr;
-    }
-    tinyxml2::XMLDocument XmlDoc;
     char *XmlBody;
 };
 

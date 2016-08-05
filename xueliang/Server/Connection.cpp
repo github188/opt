@@ -77,7 +77,7 @@ void connection::handle_read(const boost::system::error_code& e,
                 std::cout << "Read size=" << bytes_transferred << " Xml body: \r\n" << m_request.XmlBody << std::endl;
 
                 /// TODO: Handle request
-
+                m_reply |= m_request;
                 m_request_handler.handle_request(m_request, m_reply);
 
                 /// Delete request xml body.
