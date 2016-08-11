@@ -15,11 +15,7 @@ class request_handler
 public:
     explicit request_handler();
 
-    void handle_request(const Message& req, Message& rep);
-
-private:
-    int m_from;
-    int m_to;
+    void handle_request(const hm_message& req, hm_message& rep);
 };
 
 } // xl

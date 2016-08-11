@@ -16,17 +16,9 @@ namespace xl {
 
 enum ReadStatus
 {
-    READ_HEADLEN = 0,
     READ_HEAD,
     READ_BODY
 };
-
-struct connection_attr
-{
-    boost::posix_time::ptime last_online;
-    boost::tribool online_status;
-    XL_ServerCom type;
-}; 
 
 /// Represents a single connection from a client.
 class connection
@@ -62,15 +54,13 @@ private:
     request_handler& m_request_handler;
 
     /// The incoming request.
-    Message m_request;
+    hm_message m_request;
 
     /// The reply to be sent back to the client.
-    Message m_reply;
+    hm_message m_reply;
 
     /// Read process status
     ReadStatus m_reading;
-
-    connection_attr m_attr;
 };
 
 typedef boost::shared_ptr<connection> connection_ptr;

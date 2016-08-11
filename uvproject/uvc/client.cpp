@@ -46,6 +46,7 @@ void on_written(uv_write_t *req, int status)
     buf[1].len = xlhead.BodyLen;
     printf("Send xml size %d\n", xlhead.BodyLen);
     uv_write(&wr_req, ghandle, buf, 2, on_written);
+    sleep(1);
 }
 
 void onclose(uv_handle_t *handle)

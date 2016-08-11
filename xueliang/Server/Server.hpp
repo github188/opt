@@ -11,6 +11,8 @@
 
 #include "Connection.hpp"
 #include "RequestHandler.hpp"
+#include "Client.hpp"
+#include "CRedis.hpp"
 
 namespace xl {
 
@@ -20,10 +22,16 @@ class server : private boost::noncopyable
 public:
     /// Construct the server.
     explicit server(const std::string& address, 
-    const std::string& port, std::size_t thread_pool_size);
+        const std::string& port, std::size_t thread_pool_size);
+
+    boost::asio::io_service &ioservice() { return m_io_service; }
 
     /// Run the server's io_service loop.
     void run();
+
+    void run(const size_t seconds);
+
+    void redis_push(CRedis *redis);
 
     /// Stop the server.
     void stop();
@@ -48,6 +56,8 @@ private:
     request_handler m_request_handler;
 
     std::list<connection> m_client_list;
+
+    CRedis *m_redis;
 };
 
 } // xl

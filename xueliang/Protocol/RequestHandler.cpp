@@ -11,7 +11,7 @@ request_handler::request_handler()
 {
 }
 
-void request_handler::handle_request(const Message& req, Message& rep)
+void request_handler::handle_request(const hm_message& req, hm_message& rep)
 {
 }
 
