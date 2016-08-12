@@ -8,18 +8,30 @@
 #include "RequestHandler.hpp"
 #include "Connection.hpp"
 
-namespace xl {
+namespace service {
 
 connection::connection(boost::asio::io_service& io_service,
-    request_handler& handler) : 
+    request_handler& handler, 
+    std::list<connection_attr> &connect_attr_list) : 
     // Member initialization
     m_strand(io_service),
     m_socket(io_service),
     m_request_handler(handler),
     m_request(),
     m_reply(),
-    m_reading(READ_HEAD)
+    m_reading(READ_HEAD),
+    m_attr(),
+    m_connect_attr_list(connect_attr_list)
 {
+    m_attr.last_t = boost::posix_time::second_clock::local_time();
+    m_attr.id = boost::posix_time::to_iso_string(m_attr.last_t);
+}
+
+connection::~connection()
+{
+    std::cout << "Remove client[" << m_attr.id << "] total[" << 
+        m_connect_attr_list.size() << "]" << std::endl;
+    m_connect_attr_list.remove(m_attr);
 }
 
 boost::asio::ip::tcp::socket& connection::socket()
@@ -29,6 +41,12 @@ boost::asio::ip::tcp::socket& connection::socket()
 
 void connection::start()
 {
+    m_attr.last_t = boost::posix_time::second_clock::local_time();
+    m_connect_attr_list.push_back(m_attr);
+    
+    std::cout << "New client[" << m_attr.id << "] total[" << 
+        m_connect_attr_list.size() << "]" << std::endl;
+        
     m_reading = READ_HEAD;
     m_socket.async_read_some(
         boost::asio::buffer(&m_request.head, sizeof(m_request.head)),
@@ -92,5 +110,5 @@ void connection::handle_write(const boost::system::error_code& e)
     // destructor closes the socket.
 }
 
-} // xl
+} // service
 

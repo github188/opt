@@ -51,7 +51,7 @@ void RedisClientImpl::processMessage()
 
     socket.async_read_some(boost::asio::buffer(buf),
                            boost::bind(&RedisClientImpl::asyncRead,
-                                       shared_from_this(), _1, _2));
+                                       this, _1, _2));
 }
 
 void RedisClientImpl::doProcessMessage(const RedisValue &v)
@@ -167,12 +167,9 @@ void RedisClientImpl::asyncWrite(const boost::system::error_code &ec, const size
     {
         const QueueItem &item = queue.front();
         
-        //boost::asio::async_write(socket,
-        //                         boost::asio::buffer(item.buff->data(), item.buff->size()),
-        //                         boost::bind(&RedisClientImpl::asyncWrite, shared_from_this(), _1, _2));
         boost::asio::async_write(socket,
-             boost::asio::buffer(item.buff.data(), item.buff.size()),
-             boost::bind(&RedisClientImpl::asyncWrite, shared_from_this(), _1, _2));
+                                 boost::asio::buffer(item.buff->data(), item.buff->size()),
+                                 boost::bind(&RedisClientImpl::asyncWrite, this, _1, _2));
     }
 }
 
@@ -183,12 +180,7 @@ void RedisClientImpl::handleAsyncConnect(const boost::system::error_code &ec,
     {
         socket.set_option(boost::asio::ip::tcp::no_delay(true));
         state = RedisClientImpl::Connected;
-        //handler(true, std::string());
-        std::string result;
-        result.append("[Ansyc] Connect ");
-        result.append(socket.local_endpoint().address().to_string());
-        result.append(" OK.");
-        handler(true, result);
+        handler(true, std::string("OK"));
         processMessage();
     }
     else
@@ -274,8 +266,7 @@ void RedisClientImpl::doAsyncCommand(const std::vector<char> &buff,
 {
     QueueItem item;
 
-    //item.buff.reset( new std::vector<char>(buff) );
-    item.buff = buff;
+    item.buff.reset( new std::vector<char>(buff) );
     item.handler = handler;
     queue.push(item);
 
@@ -284,8 +275,8 @@ void RedisClientImpl::doAsyncCommand(const std::vector<char> &buff,
     if( queue.size() == 1 )
     {
         boost::asio::async_write(socket, 
-             boost::asio::buffer(item.buff.data(), item.buff.size()),
-             boost::bind(&RedisClientImpl::asyncWrite, shared_from_this(), _1, _2));
+                                 boost::asio::buffer(item.buff->data(), item.buff->size()),
+                                 boost::bind(&RedisClientImpl::asyncWrite, this, _1, _2));
     }
 }
 

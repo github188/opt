@@ -22,7 +22,7 @@
 #include "../redisbuffer.h"
 #include "../config.h"
 
-class RedisClientImpl : public boost::enable_shared_from_this<RedisClientImpl> {
+class RedisClientImpl {
 public:
     enum State {
         NotConnected,
@@ -87,8 +87,7 @@ public:
 
     struct QueueItem {
         boost::function<void(const RedisValue &)> handler;
-        //boost::shared_ptr<std::vector<char> > buff;
-        std::vector<char> buff;
+        boost::shared_ptr<std::vector<char> > buff;
     };
 
     std::queue<QueueItem> queue;

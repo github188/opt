@@ -14,11 +14,12 @@
 #include "Client.hpp"
 #include "CRedis.hpp"
 
-namespace xl {
+namespace service {
 
 /// The top-level class of the server.
 class server : private boost::noncopyable
 {
+    friend class connection;
 public:
     /// Construct the server.
     explicit server(const std::string& address, 
@@ -31,12 +32,11 @@ public:
 
     void run(const size_t seconds);
 
-    void redis_push(CRedis *redis);
-
     /// Stop the server.
     void stop();
 
 private:
+
     /// Handle completion of an asynchronous accept operation.
     void handle_accept(const boost::system::error_code& e);
 
@@ -49,18 +49,16 @@ private:
     /// Acceptor used to listen for incoming connections.
     boost::asio::ip::tcp::acceptor m_acceptor;
 
+    connect_attr_list m_connection_list;
+
     /// The next connection to be accepted.
     connection_ptr m_new_connection;
 
     /// The handler for all incoming requests.
     request_handler m_request_handler;
-
-    std::list<connection> m_client_list;
-
-    CRedis *m_redis;
 };
 
-} // xl
+} // service
 
 #endif // SERVER_HPP
 

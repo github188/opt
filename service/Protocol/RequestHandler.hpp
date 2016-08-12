@@ -7,7 +7,7 @@
 
 #include "Protocol.hpp"
 
-namespace xl {
+namespace service {
 
 /// The common handler for all incoming requests.
 class request_handler
@@ -18,7 +18,7 @@ public:
     void handle_request(const hm_message& req, hm_message& rep);
 };
 
-} // xl
+} // service
 
 #endif // REQUEST_HANDLER_HPP
 

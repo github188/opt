@@ -12,8 +12,8 @@
 #include "../redisclient.h"
 
 RedisAsyncClient::RedisAsyncClient(boost::asio::io_service &ioService)
-    : pimpl(boost::make_shared<RedisClientImpl>(boost::ref(ioService)))
 {
+    pimpl = new RedisClientImpl(ioService);
     pimpl->errorHandler = boost::bind(&RedisClientImpl::defaulErrorHandler,
                                       pimpl, _1);
 }
@@ -21,6 +21,7 @@ RedisAsyncClient::RedisAsyncClient(boost::asio::io_service &ioService)
 RedisAsyncClient::~RedisAsyncClient()
 {
     pimpl->close();
+    delete pimpl;
 }
 
 void RedisAsyncClient::connect(const boost::asio::ip::address &address,

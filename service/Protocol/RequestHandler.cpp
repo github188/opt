@@ -6,7 +6,7 @@
 
 #include "RequestHandler.hpp"
 
-namespace xl {
+namespace service {
 request_handler::request_handler()
 {
 }

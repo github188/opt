@@ -20,7 +20,7 @@
 
 class RedisClientImpl;
 
-class RedisAsyncClient : boost::noncopyable {
+class RedisAsyncClient {
 public:
     // Subscribe handle.
     struct Handle {
@@ -155,7 +155,7 @@ protected:
     REDIS_CLIENT_DECL bool stateValid() const;
 
 private:
-    boost::shared_ptr<RedisClientImpl> pimpl;
+    RedisClientImpl * pimpl;
 };
 
 #ifdef REDIS_CLIENT_HEADER_ONLY

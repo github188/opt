@@ -9,7 +9,7 @@
 
 #include "Server.hpp"
 
-namespace xl {
+namespace service {
 
 server::server(const std::string& address, 
     const std::string& port, 
@@ -18,8 +18,9 @@ server::server(const std::string& address,
     // member initialization
     m_thread_pool_size(thread_pool_size),
     m_acceptor(m_io_service),
-    m_new_connection(new connection(m_io_service, m_request_handler)),
-    m_request_handler(), m_redis(nullptr) 
+    m_connection_list(),
+    m_new_connection(new connection(m_io_service, m_request_handler, m_connection_list)),
+    m_request_handler()
 {
     // Open the acceptor with the option to reuse the address (i.e. SO_REUSEADDR).
     boost::asio::ip::tcp::resolver resolver(m_io_service);
@@ -70,17 +71,8 @@ void server::run(const size_t seconds)
         threads[i]->join();
 }
 
-
-void server::redis_push(CRedis *redis)
-{
-    m_redis = redis;
-}
-
 void server::stop()
 {
-    std::cout << "disconnect redis" << std::endl;
-    m_redis->disconnect();
-    std::cout << "stop ioservice" << std::endl;
     m_io_service.stop();
 }
 
@@ -89,12 +81,13 @@ void server::handle_accept(const boost::system::error_code& e)
     if (!e)
     {
         m_new_connection->start();
-        m_new_connection.reset(new connection(m_io_service, m_request_handler));
+        m_new_connection.reset(new connection(m_io_service, 
+            m_request_handler, m_connection_list));
         m_acceptor.async_accept(m_new_connection->socket(),
             boost::bind(&server::handle_accept, this,
             boost::asio::placeholders::error));
     }
 }
 
-} // xl
+} // service
 

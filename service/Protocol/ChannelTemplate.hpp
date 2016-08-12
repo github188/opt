@@ -11,8 +11,12 @@ struct CRegistChannels : public boost::noncopyable
         channels.push_back("HM.CONFIG");
         channels.push_back("HM.ALARM");
         channels.push_back("HM.STATE");
-        
         channels.push_back("HM.LOG");
+
+        // Self-control
+        // stop
+        channels.push_back("CTRL");
+        channels.push_back("TEST");
     };
     ~CRegistChannels()
     {

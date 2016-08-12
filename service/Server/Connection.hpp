@@ -8,16 +8,60 @@
 #include <boost/enable_shared_from_this.hpp>
 #include <boost/date_time/posix_time/posix_time.hpp>
 #include <boost/logic/tribool.hpp>
+#include <string>
+#include <list>
+#include <sstream>
 
 #include "RequestHandler.hpp"
 #include "Protocol.hpp"
 
-namespace xl {
+namespace service {
 
 enum ReadStatus
 {
     READ_HEAD,
     READ_BODY
+};
+
+struct connection_attr
+{
+    std::string id;    /* Init once, read only */
+    std::string ip;
+    unsigned short port;
+    boost::posix_time::ptime last_t;
+    connection_attr()
+    {
+        
+    }
+
+    connection_attr &operator=(connection_attr &o)
+    {
+        this->ip = o.ip;
+        this->last_t = o.last_t;
+        this->port = o.port;
+        return *this;
+    }
+    connection_attr &operator=(const connection_attr &o)
+    {
+        this->ip = o.ip;
+        this->last_t = o.last_t;
+        this->port = o.port;
+        return *this;
+    }
+    bool operator==(connection_attr &o)
+    {
+        if(this->id == o.id)
+            return true;
+        else
+            return false;
+    }
+    bool operator==(const connection_attr &o)
+    {
+        if(this->id == o.id)
+            return true;
+        else
+            return false;
+    }
 };
 
 /// Represents a single connection from a client.
@@ -28,7 +72,10 @@ class connection
 public:
     /// Construct a connection with the given io_service.
     explicit connection(boost::asio::io_service& io_service,
-        request_handler& handler);
+        request_handler& handler, 
+        std::list<connection_attr> &connect_attr_list);
+
+    ~connection();
 
     /// Get the socket associated with the connection.
     boost::asio::ip::tcp::socket& socket();
@@ -61,11 +108,16 @@ private:
 
     /// Read process status
     ReadStatus m_reading;
+
+    connection_attr m_attr;
+
+    std::list<connection_attr> &m_connect_attr_list;
 };
 
 typedef boost::shared_ptr<connection> connection_ptr;
+typedef std::list<connection_attr> connect_attr_list;
 
-} // xl
+} // service
 
 #endif // CONNECTION_HPP
 

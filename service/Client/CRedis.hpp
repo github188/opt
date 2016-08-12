@@ -10,13 +10,15 @@
 
 #include "redisasyncclient.h"
 
-#define PUB_CONNECT_NAME "xl.system.publisher"
-#define SUB_CONNECT_NAME "xl.system.subscriber"
+#define PUB_CONNECT_NAME "service.system.publisher"
+#define SUB_CONNECT_NAME "service.system.subscriber"
+
+typedef boost::asio::ip::address BOOSTADDR;
 
 class CRedis
 {
 public:
-    explicit CRedis(boost::asio::io_service & ioservice);
+    explicit CRedis(boost::asio::io_service & ioservice, std::string password);
     
     ~CRedis();
 
@@ -24,8 +26,6 @@ public:
     void connect();
     
     void connect(const std::string addr, unsigned short port);
-
-    void connect(const std::string addr, unsigned short port, const std::string pass);
     
     void disconnect();
 
@@ -48,6 +48,14 @@ protected:
     
     void onSubAck(const RedisValue &value);
 
+    void AuthPub();
+
+    void AuthSub();
+
+    void onList(const RedisValue &value);
+
+    void onCommonAck(const RedisValue &value);
+
 private:
 
     boost::asio::io_service &m_ioservice;
@@ -55,5 +63,7 @@ private:
     RedisAsyncClient *m_pPub;
     
     RedisAsyncClient *m_pSub;
+
+    std::string m_password;
 };
 

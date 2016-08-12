@@ -1,6 +1,6 @@
-# 雪亮项目
+# Service
 
-基于boost.asio
+基于boost.asio/redis的服务器,客户端(json/xml)based.
 
 Json: [jsoncpp](#https://github.com/open-source-parsers/jsoncpp.git)
 
